@@ -1,3 +1,6 @@
+/*
+Program: To check wether the number is a Automorphic Number
+*/
 import java.util.*;
 public class automorphic {
     public static void main(String[] args) {

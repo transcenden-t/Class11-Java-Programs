@@ -1,6 +1,9 @@
-// a number is armstong if the sum of its digits raised to the power of the length of the
-// number equals the number itself
-// 371 = 3^3 + 7^3 + 1^3
+/*
+Program: to check if the number is armstrong or not
+Concept: a number is armstong if the sum of its digits raised
+         to the power of the length of the number equals the number itself
+       371 = 3^3 + 7^3 + 1^3  
+*/
 import java.util.*;
 public class ArmNum {
     int n,l;

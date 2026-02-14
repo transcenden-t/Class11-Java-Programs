@@ -1,3 +1,6 @@
+/*
+Program: To check wether the number is a Palindrome number or not
+*/
 import java.util.*;
 public class Palindrome {
     public static void main(String args[])

@@ -1,3 +1,6 @@
+/*
+Program: To check wether the number is a MagicCompo number or not
+*/
 import java.util.*;
 public class MagicCompo {
     public static void main(String args[])

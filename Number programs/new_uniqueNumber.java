@@ -1,5 +1,6 @@
-// Unique number is a number in which the digits does not repeat itself. 
-// But if any number repeats then print the maximum number of repetition of that number.
+/*
+Program: To check wether the number is a Unique number or not
+*/
 import java.util.*;
 public class new_uniqueNumber {
     public static void main(String args[])

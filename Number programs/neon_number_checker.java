@@ -1,3 +1,6 @@
+/*
+Program: To check wether the number is a Neon number or not
+*/
 import java.util.*;
 public class neon_number_checker {
     public static void main(String args[])
