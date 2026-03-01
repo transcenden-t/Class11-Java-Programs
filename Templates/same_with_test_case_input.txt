@@ -1,0 +1,13 @@
+import java.util.*;
+public class <class name>
+{
+    public static void main(String args[])
+    {
+        Scanner in = new Scanner(System.in);
+        int tc=in.nextInt();
+        while(tc-->0)
+        {
+            
+        }
+    }
+}
