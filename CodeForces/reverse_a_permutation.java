@@ -1,37 +1,38 @@
-//reverse_a_permutation
 import java.util.*;
-public class reverse_a_permutation {
-    public static void main(String[] args) {
+public class reverse_a_permutation
+{
+    public static void main(String args[])
+    {
         Scanner in = new Scanner(System.in);
-        int a=in.nextInt();
-        int r,max,tempj=0,j;
-        for(int b=1;b<=a;b++){
-        r = in.nextInt();             //taking range of the input
-        int arr[] = new int[r];
-        for(int i=0;i<r;i++)              //taking input array
-            arr[i] = in.nextInt();
-        for(int i=0;i<r;i++)              //iterating through the array
+        int tc=in.nextInt();
+        while(tc-->0)
         {
-            max=0;
-            for( j=i;j<r;j++)             //iterating from that number to the end
+            boolean what=true;
+            int max=0,m,maxindex=0;
+            int n=in.nextInt();
+            int nn=n;
+            int arr[]=new int[n];
+            for(int i=0;i<n;i++) arr[i]=in.nextInt();
+            for(int i=0;i<nn;i++)
             {
-                if(arr[j]>max)            //finding max for that segment 
+                if(n==arr[i]) System.out.print(arr[i]+" ");
+                else
                 {
-                        max=arr[j];
-                        tempj=j;        
+                    what=false;
+                    for(m=i;m<nn;m++) 
+                    {
+                        if(max<arr[m]) {maxindex=m; max=arr[m];}
+                    }
+                    for(int j=maxindex;j>=i;j--) System.out.print(arr[j]+" ");
+                    break;
+                }
+                n=n-1;
             }
-        }
-            if(max==arr[i])               //checking if max is 1st element of segment
-                System.out.print(arr[i]+" ");
-            else
-                {//if not 1st element then reverse segment(this will happen only once)
-                for(int k=tempj;k>=i;k--)
-                System.out.print(arr[k]+" ");
-            for(int t=tempj+1;t<r;t++) // then print the rest of the elements 
-                System.out.print(arr[t]+" ");
-            break;
+            if(maxindex!=nn && what==false)
+            {
+                for(int i=maxindex+1;i<nn;i++) System.out.print(arr[i]+" ");
             }
+            System.out.println();   
         }
-    }
     }
 }
