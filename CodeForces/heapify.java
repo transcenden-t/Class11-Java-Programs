@@ -7,39 +7,29 @@ public class heapify
         int tc=in.nextInt();
         while(tc-->0)
         {
-            int e,root=0;
-            int n = in.nextInt();
-            int arr[] = new int[n+1];
+            int n=in.nextInt();
+            boolean isheap=true;
+            int arr[]= new int[n+1];
             for(int i=1;i<=n;i++) arr[i]=in.nextInt();
-            boolean[] this_i_checked = new boolean[n+1];
-            boolean ispossible=true;
+            int val,pos;
             for(int i=1;i<=n;i++)
             {
-                if(!this_i_checked[i])
+                if(i!=arr[i])
                 {
-                    root=i;
-                    while(root%2==0) root/=2;
-                    e = 0;
-                    for (int j = root; j <= n; j *= 2) e++;
-                    int ind[] = new int[e];
-                    int val[] = new int[e];
-                    int idx=0;
-                    for (int j = root; j <= n; j *= 2) {
-                        ind[idx] = j;
-                        val[idx] = arr[j];
-                        this_i_checked[j] = true;
-                        idx++;
-                    }
-                    Arrays.sort(ind);
-                    Arrays.sort(val);
-                    if(!Arrays.equals(ind,val))
+                    val = arr[i];
+                    pos = i;
+                    if(val>=pos)
                     {
-                        ispossible=false;
-                        break;
+                        while(pos<val) pos*=2;
+                    }  
+                    else
+                    {
+                        while(pos>val) pos/=2;
                     }
+                    if(pos!=val) {isheap=false; break;}
                 }
             }
-            System.out.println(ispossible ? "YES" : "NO");
+            System.out.println(isheap ? "YES" : "NO");
         }
     }
 }
